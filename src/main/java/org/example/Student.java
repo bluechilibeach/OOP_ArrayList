@@ -5,12 +5,12 @@ import java.util.Objects;
 
 public class Student {
 
-    String firstName;
-    String lastName;
-    int studentId;
+    private String firstName;
+    private String lastName;
+    private String studentId;
 
 
-    public Student(String firstName, String lastName, int studentId) {
+    public Student(String firstName, String lastName, String studentId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.studentId = studentId;
@@ -32,11 +32,11 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
