@@ -1,23 +1,29 @@
 package org.example;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    static void main() {
+    public static void main() {
+
+        Student student1 = new Student("Jack", "Smith", "12345");
+        Student student2 = new Student("Jane", "Greene", "12346");
+        Student student3 = new Student("Max", "Black", "12347");
 
         List<Student> students = new ArrayList<>();
+        MySchool school = new MySchool();
 
-        Student student1 = new Student("Jack", "Smith", 12345);
-        Student student2 = new Student("Jane", "Greene", 12346);
-        Student student3 = new Student("Max", "Black", 12347);
+        school.addStudent(student1);
+        school.addStudent(student2);
+        school.addStudent(student3);
 
-        students.add(student1);
-        students.add(student2);
-        students.add(student3);
 
-        System.out.println(students);
+        //school.listAllStudents();
+        Student foundStudent = school.findStudentById("12346");
+        System.out.println(foundStudent);
+
+        school.deleteStudentById("12346");
+
 
     }
 }
